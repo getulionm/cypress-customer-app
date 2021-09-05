@@ -1,0 +1,58 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "required": [
+        "name",
+        "timestamp",
+        "customers"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "timestamp": {
+            "type": "string"
+        },
+        "customers": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "id",
+                    "name",
+                    "employees",
+                    "size"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "employees": {
+                        "type": "integer"
+                    },
+                    "contactInfo": {
+                        "type": "object",
+                        "required": [
+                            "name",
+                            "email"
+                        ],
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "email": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "size": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
